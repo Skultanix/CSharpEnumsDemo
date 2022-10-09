@@ -17,7 +17,15 @@
             var methodId = 3;
             Console.WriteLine((ShippingMethod)methodId);
 
+            Console.WriteLine(method.ToString());
+            //Console.WriteLine() defaults to string values
+            Console.WriteLine(method);
 
+            //Parsing a string to an enum
+            var methodName = "CorgiCaravan";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+
+            Console.WriteLine(shippingMethod);
         }
     }
 }
